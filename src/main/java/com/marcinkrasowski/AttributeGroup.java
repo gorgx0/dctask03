@@ -31,4 +31,15 @@ public class AttributeGroup extends  AbstractAttribute{
     public AttributeGroup(String name) {
         this.name = name;
     }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("{ Attribute Group: ")
+                .append(this.getName())
+                .append(" }\n");
+        for (AbstractAttribute attribute : attributes) {
+            sb.append(attribute.toString());
+        }
+        return sb.toString();
+    }
 }

@@ -31,4 +31,14 @@ public class Attribute extends  AbstractAttribute {
     }
 
 
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb
+                .append("[ name: ")
+                .append(this.getName())
+                .append(" value: ")
+                .append(this.getValue())
+                .append(" ]\n");
+        return sb.toString();
+    }
 }
