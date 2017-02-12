@@ -31,9 +31,10 @@ public class Attribute extends  AbstractAttribute {
     }
 
 
-    public String toString() {
+    public String toString(int level) {
         StringBuilder sb = new StringBuilder();
         sb
+                .append(createPrefix(level))
                 .append("[ name: ")
                 .append(this.getName())
                 .append(" value: ")

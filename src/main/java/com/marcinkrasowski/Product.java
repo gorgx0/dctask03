@@ -35,9 +35,12 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "name='" + name + '\'' +
-                ", attributes=\n" + attributes +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Product{ name: ").append(this.getName()).append(", attributes=\n");
+        for (AbstractAttribute attribute : attributes) {
+            sb.append(attribute.toString(0));
+        }
+        sb.append("}\n");
+        return sb.toString();
     }
 }

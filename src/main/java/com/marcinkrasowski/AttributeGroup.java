@@ -1,5 +1,6 @@
 package com.marcinkrasowski;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -32,14 +33,17 @@ public class AttributeGroup extends  AbstractAttribute{
         this.name = name;
     }
 
-    public String toString() {
+    public String toString(int level) {
         StringBuilder sb = new StringBuilder();
-        sb.append("{ Attribute Group: ")
+        sb.append(createPrefix(level))
+                .append("{ Attribute Group: ")
                 .append(this.getName())
                 .append(" }\n");
         for (AbstractAttribute attribute : attributes) {
-            sb.append(attribute.toString());
+            sb.append(createPrefix(level))
+            .append(attribute.toString(level+1));
         }
         return sb.toString();
     }
+
 }

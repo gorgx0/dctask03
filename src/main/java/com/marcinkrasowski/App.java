@@ -17,6 +17,11 @@ public class App {
         attributeGroup02.addAttribute(new Attribute("attr01g02","value of 01g02"));
         attributeGroup02.addAttribute(new Attribute("attr02g02","value of 02g02"));
 
+        AttributeGroup attributeGroup03 = new AttributeGroup("group03");
+        attributeGroup03.addAttribute(new Attribute("attr01g03","value of 01g03"));
+        attributeGroup03.addAttribute(new Attribute("attr02g03","value of 02g03"));
+        attributeGroup02.addAttribute(attributeGroup03);
+
         p1.addAttribute(attributeGroup01);
         p1.addAttribute(attributeGroup02);
 
